@@ -1,7 +1,5 @@
 import * as React from "react";
-import {
-  Megaphone,
-} from "lucide-react";
+import { Megaphone } from "lucide-react";
 import Logo from "@/assets/auth-logo.png";
 
 import { NavMain } from "@/components/nav-main";
@@ -29,7 +27,8 @@ import {
   Upload,
   User,
   ViewGrid,
-} from "iconoir-react"; 
+} from "iconoir-react";
+import { NavLink } from "react-router-dom";
 
 const data = {
   navMain: [
@@ -96,7 +95,7 @@ const data = {
     {
       title: "Announcements",
       url: "/announcements",
-      icon: Megaphone, 
+      icon: Megaphone,
     },
     {
       title: "Notifications",
@@ -108,7 +107,7 @@ const data = {
       url: "/ratings-reviews",
       icon: BrightStar,
     },
-        {
+    {
       title: "Support",
       url: "/support",
       icon: HeadsetHelp,
@@ -118,38 +117,39 @@ const data = {
       url: "/courses",
       icon: JournalPage,
     },
-         {
+    {
       title: "Subscription Management",
       url: "/subscription-management",
       icon: DollarCircle,
     },
-      {
+    {
       title: "Subscriptions Purchased",
       url: "/subscriptions-purchased",
       icon: BitcoinRotateOut,
     },
-          {
+    {
       title: "Mock Exams",
       url: "/mock-exams",
       icon: Page,
     },
-              {
+    {
       title: "Tickets",
       url: "/tickets",
       icon: PageMinusIn,
     },
   ],
-
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
-        <a href="/dashboard" className="flex gap-[10px] items-center">
-          <img src={Logo} alt="Logo" className="max-w-[58px]"/>
-          <div className="justify-start text-[#0a4ba8] text-sm font-bold leading-5">vCareProject Management</div>
-        </a>
+        <NavLink to="/dashboard" className="flex gap-[10px] items-center">
+          <img src={Logo} alt="Logo" className="max-w-[58px]" />
+          <div className="justify-start text-[#0a4ba8] text-sm font-bold leading-5">
+            vCareProject Management
+          </div>
+        </NavLink>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
