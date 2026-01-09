@@ -7,6 +7,8 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { DialogDescription } from "@radix-ui/react-dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 interface QuestionSuccessDialogProps {
   open: boolean;
@@ -35,6 +37,7 @@ const QuestionSuccessDialog: React.FC<QuestionSuccessDialogProps> = ({
           <DialogTitle className="text-center text-2xl text-Black md:text-3xl">
             {title}
           </DialogTitle>
+          <VisuallyHidden><DialogDescription></DialogDescription></VisuallyHidden>
         </DialogHeader>
         <DialogFooter>
           <Button type="button" onClick={onClose} className="w-full">

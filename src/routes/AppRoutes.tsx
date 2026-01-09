@@ -23,8 +23,7 @@ import ApplicationSupport from "@/pages/dashboard/ApplicationSupport/Application
 import ExamStrategy from "@/pages/dashboard/ExamStrategy/ExamStrategy";
 import CertificatesPDUs from "@/pages/dashboard/CertificatesPDUs/CertificatesPDUs";
 import Announcements from "@/pages/dashboard/Announcements/Announcements";
-import Notifications from "@/pages/dashboard/Notifications";
-import RatingsReviews from "@/pages/dashboard/RatingsReviews";
+import RatingsReviews from "@/pages/dashboard/RatingsReviews/RatingsReviews";
 import CompanyProfile from "@/pages/dashboard/CompanyProfile";
 import Roles from "@/pages/dashboard/Roles/Roles";
 import RoleDetails from "@/pages/dashboard/Roles/RoleDetails";
@@ -49,6 +48,8 @@ import SubscriptionManagement from "@/pages/dashboard/SubscriptionManagement/Sub
 import SubscriptionsPurchased from "@/pages/dashboard/SubscriptionsPurchased/SubscriptionsPurchased";
 import MockExams from "@/pages/dashboard/MockExams/MockExams";
 import Tickets from "@/pages/dashboard/Tickets/Tickets";
+import Notifications from "@/pages/dashboard/Notifications/Notifications";
+import AddNotifications from "@/pages/dashboard/Notifications/AddNotifications";
 
 const AppRoutes = () => {
   return (
@@ -141,6 +142,7 @@ const AppRoutes = () => {
 
         {/*Notifications*/}
         <Route path="/notifications" element={<Notifications />} />
+        <Route path="/notifications/add-notification" element={<AddNotifications />} />
 
         {/*Ratings Reviews*/}
         <Route path="/ratings-reviews" element={<RatingsReviews />} />

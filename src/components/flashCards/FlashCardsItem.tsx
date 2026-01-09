@@ -28,7 +28,7 @@ const FlashCardsItem = ({ id, question, image }: FlashCardItemProps) => {
       {" "}
       <div className="p-4 relative bg-light-blue rounded-[20px] outline outline-1 outline-[#556378]/40 flex flex-col items-center gap-[10px] justify-center min-h-44">
         {image && (
-          <img
+          <img 
             src={image}
             alt="Flash card"
             className="w-[118px] h-[100px] rounded-[10px]"
