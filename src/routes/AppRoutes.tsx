@@ -5,11 +5,11 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import ProtectedRoute from "./ProtectedRoute";
 
 import Login from "../pages/auth/Login";
-import Dashboard from "../pages/dashboard/Dashboard";
 import { isAuthenticated } from "../auth/Authenticated";
 import ForgotPassword from "@/pages/auth/ForgotPassword";
 import EnterOtp from "@/pages/auth/EnterOtp";
 import CreateNewPassword from "@/pages/auth/CreateNewPassword";
+import Dashboard from "../pages/dashboard/Dashboard";
 import UploadFiles from "@/pages/dashboard/UploadFiles/UploadFiles";
 import Users from "@/pages/dashboard/Users/Users";
 import UsersDetails from "@/pages/dashboard/Users/UsersDetails";
@@ -50,6 +50,7 @@ import MockExams from "@/pages/dashboard/MockExams/MockExams";
 import Tickets from "@/pages/dashboard/Tickets/Tickets";
 import Notifications from "@/pages/dashboard/Notifications/Notifications";
 import AddNotifications from "@/pages/dashboard/Notifications/AddNotifications";
+import EditSubscriptionPage from "@/pages/dashboard/SubscriptionManagement/EditSubscriptionPage";
 
 const AppRoutes = () => {
   return (
@@ -84,35 +85,28 @@ const AppRoutes = () => {
       >
         {/* Dashboard page */}
         <Route path="/dashboard" element={<Dashboard />} />
-
          {/* Upload files page */}
         <Route path="/upload-files" element={<UploadFiles />} />
-
          {/* Users page */}
         <Route path="/users" element={<Users />} />
         <Route path="/users/:id" element={<UsersDetails />} />
-
          {/* Course introduction page */}
         <Route path="/course-introduction" element={<CourseIntroduction />} />
         <Route path="/course-introduction/edit/:courseId" element={<CourseEdit />} />
-
         {/* Lessons videos page */}
         <Route path="/lessons-videos" element={<LessonsVideos />} />
         <Route path="/lessons-videos/add-lessons-module" element={<AddLessonsModule />}/>
         <Route path="/lessons-videos/edit-lessons-module/:id" element={<AddLessonsModule />}/>
         <Route path="/lessons-videos/edit-lessons-task/:moduleId/:itemId" element={<EditLessonsTask />}/>
-
         {/* Domains tasks page */}
         <Route path="/domains-tasks" element={<DomainsTasks />} />
         <Route path="/domains-tasks/add-domains" element={<AddDomains />}/>
         <Route path="/domains-tasks/add-domains/:id" element={<AddDomains />} />
         <Route path="/domains-tasks/edit-domains-questions/:id" element={<EditDomainsQuestions />}/>
         <Route path="/domains-tasks/domain-edit-item/:moduleId/:itemId" element={<DomainsEditItem />}/>
-
          {/*Question page*/}
         <Route path="/questions" element={<Questions />} />
         <Route path="/questions/QuestionsView/:id" element={<View />} />
-
          {/*Exams Page*/}
         <Route path="/exams" element={<Exams />} />
         {/*Flash Cards*/}
@@ -120,54 +114,41 @@ const AppRoutes = () => {
         <Route path="/flash-cards/add-flash-cards" element={<AddFlashCard />} />
         <Route path="/flash-cards/edit-flash-cards/:id" element={<AddFlashCard />} />
         <Route path="/flash-cards/manage-categories" element={<ManageCategories />} />
-
          {/*Application Support*/}
         <Route path="/application-support" element={<ApplicationSupport />} />
         <Route path="/application-support/add-application-support" element={<AddApplicationSupport />} />
         <Route path="/application-support/edit-application-support/:id" element={<AddApplicationSupport />} />
         <Route path="/application-support/edit-application-task/:moduleId/:itemId" element={<EditApplicstionTask/>} />
-
         {/*Exam Strategy*/}
         <Route path="/exam-strategy" element={<ExamStrategy />} />
         <Route path="/exam-strategy/add-exam-strategy" element={<AddExamStrategy />} />
         <Route path="/exam-strategy/edit-exam-strategy/:id" element={<AddExamStrategy />} />
         <Route path="/exam-strategy/edit-exam-task/:moduleid/:itemId" element={<EditExamTask />} />
-
         {/*Certificates PDUs*/}
         <Route path="/certificates-pdus" element={<CertificatesPDUs />} />
-
         {/*Announcements*/}
         <Route path="/announcements" element={<Announcements />} />
         <Route path="/announcements/add-announcement" element={<AddAnnouncements />} />
-
         {/*Notifications*/}
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/notifications/add-notification" element={<AddNotifications />} />
-
         {/*Ratings Reviews*/}
         <Route path="/ratings-reviews" element={<RatingsReviews />} />
-
         {/*Support */}
         <Route path="/support" element={<Support />} />
-
         {/*Courses */}
         <Route path="/courses" element={<Courses />} />
-
         {/*Subscription Management */}
         <Route path="/subscription-management" element={<SubscriptionManagement />} />
-        
+         <Route path="/subscription-management/edit/:id" element={<EditSubscriptionPage />} />
         {/*Subscriptions Purchased */}
         <Route path="/subscriptions-purchased" element={<SubscriptionsPurchased />} />
-
         {/*Mock Exams */}
         <Route path="/mock-exams" element={<MockExams />} />
-
        {/*Tickets*/}
         <Route path="/tickets" element={<Tickets />} /> 
-
         {/*Company Profile*/}
         <Route path="/company-profile" element={<CompanyProfile />} />
-
         {/*Role*/}
         <Route path="/roles" element={<Roles />} />
         <Route path="/roles/add" element={<AddRole />} />

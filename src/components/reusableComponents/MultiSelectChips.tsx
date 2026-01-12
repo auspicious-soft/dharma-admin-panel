@@ -46,9 +46,9 @@ export function MultiSelectChips<T extends string>({
   }, []);
 
   return (
-    <div className="relative" ref={wrapperRef}>
+    <div className="relative w-full" ref={wrapperRef}>
       <div
-        className="flex px-4 py-[10px] min-h-[53.6px] items-center bg-white rounded-[99px] outline-none w-full border border-[#e8e8e8] text-paragraph text-sm font-light justify-between rounded-full cursor-pointer"
+        className="flex px-4 py-[10px] min-h-[53.6px] flex-1 items-center bg-white rounded-[99px] outline-none w-full border border-[#e8e8e8] text-paragraph text-sm font-light justify-between rounded-full cursor-pointer"
         onClick={() => setOpen(prev => !prev)}
       >
         <div className="flex gap-2 flex-wrap">

@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Upload } from "iconoir-react";
 import { Button } from "@/components/ui/button";
 import { Module } from "@/components/DomainsTasks/types";
@@ -43,7 +36,7 @@ const DomainsTasks = () => {
   return (
     <div className="flex flex-col gap-5 ">
       <div className="flex justify-between flex-wrap gap-4 items-center">
-        <h2 className="text-2xl font-bold">Domains & Tasks</h2>
+        <h2 className="text-Black text-lg font-bold capitalize">Domains & Tasks</h2>
     <CourseSelect />
       </div>
 

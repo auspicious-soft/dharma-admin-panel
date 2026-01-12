@@ -41,7 +41,8 @@ const RichTextEditor = ({
           "help",
           "wordcount",
         ],
-
+ font_size_formats:
+      "12px 14px 16px 18px 20px 24px 28px 32px",
         toolbar:
           "undo redo | blocks | " +
           "bold italic underline strikethrough | " +
@@ -50,6 +51,9 @@ const RichTextEditor = ({
           "bullist numlist outdent indent | " +
           "link image media table | " +
           "removeformat | code fullscreen preview help",
+
+          
+
 
         // Optional: format dropdown
         block_formats:

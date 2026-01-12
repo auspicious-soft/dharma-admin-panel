@@ -23,7 +23,7 @@ interface FileUpload {
   duration: string;
   fileType: "" | "PDF" | "Video" | "Questionnaire";
   file: File | null;
-  videoUrl: string;
+  enterUrl: string;
 }
 
 interface UploadSection {
@@ -49,7 +49,7 @@ const AddLessonsModule = () => {
           duration: "",
           fileType: "",
           file: null,
-          videoUrl: "",
+          enterUrl: "",
         },
       ],
     },
@@ -69,7 +69,7 @@ const AddLessonsModule = () => {
                   duration: "",
                   fileType: "",
                   file: null,
-                  videoUrl: "",
+                  enterUrl: "",
                 },
               ],
             }
@@ -221,43 +221,22 @@ const AddLessonsModule = () => {
                         <SelectContent>
                           <SelectItem value="PDF">PDF</SelectItem>
                           <SelectItem value="Video">Video</SelectItem>
-                          <SelectItem value="Questionnaire">
-                            Questionnaire
-                          </SelectItem>
                         </SelectContent>
                       </Select>
 
-                      {fileUpload.fileType === "Video" && (
-                        <Input
+                      <Input
                           type="url"
-                          placeholder="Enter video URL"
-                          value={fileUpload.videoUrl}
+                          placeholder="Enter URL"
+                          value={fileUpload.enterUrl}
                           onChange={(e) =>
                             updateFileUpload(
                               section.id,
                               fileUpload.id,
-                              "videoUrl",
+                              "enterUrl",
                               e.target.value
                             )
                           }
                         />
-                      )}
-
-                      {/* PDF / Questionnaire → File upload */}
-                      {(fileUpload.fileType === "PDF" ||
-                        fileUpload.fileType === "Questionnaire") && (
-                        <Input
-                          type="file"
-                          onChange={(e) =>
-                            updateFileUpload(
-                              section.id,
-                              fileUpload.id,
-                              "file",
-                              e.target.files?.[0] || null
-                            )
-                          }
-                        />
-                      )}
                     </div>
                   </div>
                 ))}
@@ -270,6 +249,21 @@ const AddLessonsModule = () => {
                   + Add New
                 </button>
               </div>
+              <div className="space-y-3 lg:pl-7">
+              <div
+                    className="flex flex-col items-end gap-4 p-4 lg:p-4 bg-white rounded-lg w-full"
+                  >
+                    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-2 flex-1">
+                      <Input
+                          type="text"
+                          placeholder="Questionnaire "
+                         
+                        />
+                        <Input type="file" placeholder="Select file" />
+                      </div>
+                    </div>
+                    </div>
+
             </div>
           </div>
         ))}

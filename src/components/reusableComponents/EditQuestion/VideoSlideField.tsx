@@ -138,9 +138,6 @@ const VideoSlideField = () => {
                       <SelectContent>
                         <SelectItem value="PDF">PDF</SelectItem>
                         <SelectItem value="Video">Video</SelectItem>
-                        <SelectItem value="Questionnaire">
-                          Questionnaire
-                        </SelectItem>
                       </SelectContent>
                     </Select>
 

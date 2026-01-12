@@ -1,10 +1,10 @@
 import { ColumnDef } from "@tanstack/react-table";
-import { ExamsItem } from "./exams.data";
+import { MockExamsItem } from "./mockExams.data";
 import { Button } from "@/components/ui/button";
 
-export const ExamsColumns = (
-  onView: (exam: ExamsItem) => void
-): ColumnDef<ExamsItem>[] => [
+export const MockExamsColumns = (
+  onView: (exam: MockExamsItem) => void
+): ColumnDef<MockExamsItem>[] => [
   {
     accessorKey: "examName",
     header: "Exam Name",
@@ -43,13 +43,13 @@ cell: ({ row }) => {
 },
 },
 
-  { 
+  {
     header: "Action",
     cell: ({ row }) =>
       row.original.status === "Completed" ? (
         <Button
           onClick={() => onView(row.original)}
-          className="h-[44px]"
+          className="h-[34px] text-sm rounded-xl !px-4 !py-2"
         >
           View Report
         </Button>

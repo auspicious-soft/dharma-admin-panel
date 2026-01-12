@@ -71,7 +71,7 @@ const AddAccessDialog = ({ open, onOpenChange, file, mode }: Props) => {
             className="max-w-[80px] md:max-w-[100px] m-auto"
           />
           <DialogTitle className="text-center text-2xl lg:text-3xl font-bold">
-            {mode === "create" ? "Add Access" : "Edit Access"}
+            {mode === "create" ? "Add Access" : "Edit s Access"}
           </DialogTitle>
           <VisuallyHidden>
             <DialogDescription></DialogDescription>

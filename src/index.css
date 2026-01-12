@@ -159,3 +159,34 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     height: 26px;
     margin-top: 6px;
 }
+
+.tinymce-content h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.tinymce-content h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #000;
+}
+
+.tinymce-content p {
+  margin-bottom: 0.2rem;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.tinymce-content ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.tinymce-content li {
+  margin-top: 0.4rem;
+  margin-bottom: 0.25rem;
+  font-size: 14px;
+  font-weight: 600;
+}
