@@ -4,7 +4,7 @@ import { ratingsReviewsCardData } from "@/components/RatingsReviews/ratingsRevie
 import { RatingsReviewsType } from "@/components/RatingsReviews/ratingsReviewsType";
 import ConfirmDialog from "@/components/dialogs/ConfirmDialog";
 import RatingsReviewsDialog from "@/components/RatingsReviews/RatingsReviewsDialog";
-import { BinMinusIn, EditPencil, Star } from "iconoir-react";
+import { BinMinusIn, EditPencil } from "iconoir-react";
 import StarFilled from "@/assets/star-filled.png";
 import StarEmpty from "@/assets/star-empty.png";
 import CourseSelect from "@/components/reusableComponents/CourseSelect";
