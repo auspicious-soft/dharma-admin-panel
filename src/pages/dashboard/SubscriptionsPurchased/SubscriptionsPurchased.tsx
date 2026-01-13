@@ -14,7 +14,7 @@ import DateInput from "@/components/reusableComponents/DateInput";
 
 const SubscriptionsPurchased = () => {
   return (
-    <div className="flex flex-col gap-4 mt-2">
+    <div className="flex flex-col gap-4">
       {/* HEADER */}
       <div className="flex justify-between flex-wrap gap-4 items-center">
         <h2 className="text-black text-lg md:text-2xl font-bold nd:leading-[46px]">
