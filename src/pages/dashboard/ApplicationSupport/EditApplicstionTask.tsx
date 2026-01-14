@@ -13,6 +13,7 @@ import { BinMinusIn } from "iconoir-react";
 import SuccessfullyIcon from "@/assets/successfully-icon.png";
 import CourseSelect from "@/components/reusableComponents/CourseSelect";
 import QuestionSuccessDialog from "@/components/dialogs/QuestionSuccessDialog";
+import FileUploadInput from "@/components/reusableComponents/FileUploadInput";
 
 interface FileUpload {
   id: string;
@@ -102,9 +103,7 @@ const EditApplicstionTask = () => {
   return (
     <div className="flex flex-col gap-5 ">
       <div className="flex justify-between flex-wrap gap-4 items-center">
-        <h2 className="text-2xl font-bold">
-        Edit Application Task 
-        </h2>
+        <h2 className="text-2xl font-bold">Edit Application Task</h2>
         <CourseSelect />
       </div>
 
@@ -186,15 +185,15 @@ const EditApplicstionTask = () => {
                       )}
 
                       {/* PDF / Questionnaire → File upload */}
-                      {(fileUpload.fileType === "PDF" ) && (
-                        <Input
-                          type="file"
-                          onChange={(e) =>
+                      {fileUpload.fileType === "PDF" && (
+                        <FileUploadInput
+                          placeholder="Select"
+                          onFileChange={(file) =>
                             updateFileUpload(
                               section.id,
                               fileUpload.id,
                               "file",
-                              e.target.files?.[0] || null
+                              file
                             )
                           }
                         />
@@ -203,7 +202,6 @@ const EditApplicstionTask = () => {
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         ))}

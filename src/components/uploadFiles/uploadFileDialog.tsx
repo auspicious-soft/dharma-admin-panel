@@ -22,6 +22,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import FileUploadInput from "../reusableComponents/FileUploadInput";
 
 const UploadFileDialog = () => {
   return (
@@ -72,11 +73,12 @@ const UploadFileDialog = () => {
             </Select>
           </div>
           <div className="space-y-1">
-            <Input id="file" type="file" className="cursor-pointer" />
+             <FileUploadInput placeholder="Select"/>
           </div>
 
           <div className="space-y-1">
             <Input id="file-name" placeholder="File Name" />
+           
           </div>
 
           <div className="flex justify-end gap-2 pt-4">

@@ -38,7 +38,7 @@ const data = {
       icon: ViewGrid,
     },
     {
-      title: "UploadFiles",
+      title: "Upload Files",
       url: "/upload-files",
       icon: Upload,
     },

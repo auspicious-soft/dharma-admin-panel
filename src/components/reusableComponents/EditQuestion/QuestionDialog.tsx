@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { BinMinusIn } from "iconoir-react";
+import FileUploadInput from "../FileUploadInput";
 
 /* ---------------- TYPES ---------------- */
 
@@ -216,14 +217,14 @@ const QuestionDialog = ({ mode, question, children }: QuestionDialogProps) => {
         />
         <div className="space-y-2">
           <Label>Upload Image</Label>
-          <Input
-            type="file"
+          <FileUploadInput
+            placeholder="Select"
             accept="image/*"
-            onChange={(e) => {
-              const file = e.target.files?.[0] || null;
+            onFileChange={(file) => {
               setImageFile(file);
             }}
           />
+  
         </div>
         {/* ---------- MCQ ---------- */}
         {questionType === "mcq" && (

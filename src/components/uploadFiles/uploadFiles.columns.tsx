@@ -13,7 +13,7 @@ export const uploadFilesColumns = (
   },
   {
     accessorKey: "category",
-    header: "Type",
+    header: "Category",
   },
   {
     accessorKey: "course",

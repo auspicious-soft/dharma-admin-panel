@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import FileUploadInput from "@/components/reusableComponents/FileUploadInput";
 
 type TemplatesDialogProps = {
   open: boolean;
@@ -134,7 +135,7 @@ const TemplatesDialog = ({
             </div>
             <div className="space-y-1 w-full">
               <Label className="text-paragraph">Signature of Trainer</Label>
-              <Input type="file" placeholder="Enter Value" />
+              <FileUploadInput placeholder="Select file"/>
             </div>
           </div>
 
@@ -156,7 +157,7 @@ const TemplatesDialog = ({
           </div>
           <div className="space-y-1 w-full">
             <Label className="text-paragraph">Company Logo</Label>
-            <Input type="file" placeholder="Company Logo" />
+            <FileUploadInput placeholder="Select file"/>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_2fr] gap-2 pt-4">

@@ -14,6 +14,7 @@ import RichTextEditor from "@/components/reusableComponents/RichTextEditor";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import QuestionSuccessDialog from "@/components/dialogs/QuestionSuccessDialog";
+import FileUploadInput from "@/components/reusableComponents/FileUploadInput";
 
 const AddFlashCard = () => {
   const { id } = useParams<{ id?: string }>();
@@ -59,7 +60,7 @@ const AddFlashCard = () => {
             <RichTextEditor value={frontValue} onChange={setFrontValue} />
             <div className="space-y-2">
               <Label className="text-paragraph">Upload Image</Label>
-              <Input type="file" />
+               <FileUploadInput placeholder="Select"/>
             </div>
           </div>
         </div>
@@ -70,7 +71,7 @@ const AddFlashCard = () => {
             <RichTextEditor value={backValue} onChange={setBackValue} />
             <div className="space-y-2">
               <Label className="text-paragraph">Upload Image</Label>
-              <Input type="file" />
+              <FileUploadInput placeholder="Select"/>
             </div>
           </div>
         </div>

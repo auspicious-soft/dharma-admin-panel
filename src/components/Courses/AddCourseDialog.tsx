@@ -19,6 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import FileUploadInput from "../reusableComponents/FileUploadInput";
 
 interface AddCourseDialogProps {
   open: boolean;
@@ -65,7 +66,7 @@ const AddCourseDialog: React.FC<AddCourseDialogProps> = ({
               placeholder="Order Of Course"
               className=" flex-1 min-w-36" 
             />
-            <Input type="file" placeholder="Browse Image" className="" />
+             <FileUploadInput placeholder="Browse Image"/>
           </div>
         </div>
 

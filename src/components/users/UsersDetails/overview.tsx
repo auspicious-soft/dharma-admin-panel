@@ -219,7 +219,7 @@ const Overview = ({ onViewAll }: OverviewProps) => {
       <div className="p-4 bg-light-blue rounded-[10px] flex flex-col gap-6">
         <div className="flex flex-col md:flex-row gap-2 items-center justify-between w-full md:w-auto">
           <h3 className="text-black text-2xl font-bold w-full md:w-auto">
-            Subscription Details
+            Recent Exam Activity
           </h3>
           <Button variant="secondary" onClick={onViewAll} className="h-[44px]">
             View All

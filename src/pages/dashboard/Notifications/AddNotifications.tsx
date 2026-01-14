@@ -11,14 +11,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import React from "react";
+import React, { useState } from "react";
 
 const AddNotifications = () => {
+   const [time, setTime] = useState("");
   return (
     <div className="flex flex-col gap-5 ">
       <div className="flex justify-between flex-col lg:flex-row gap-4 items-center">
         <h2 className="justify-start text-2xl font-bold w-full lg:w-auto">
-          Announcements
+          Notifications
         </h2>
       </div>
       <div className="self-stretch p-4 bg-light-blue rounded-[20px] inline-flex flex-col justify-start items-start gap-4">
@@ -50,12 +51,7 @@ const AddNotifications = () => {
           </div>
           <div className="space-y-1 w-full">
             <Label className="text-paragraph">Select Time</Label>
-            <TimeInput
-              value={""}
-              onChange={function (): void {
-                throw new Error("Function not implemented.");
-              }}
-            />
+            <TimeInput value={time} onChange={setTime} />
           </div>
         </div>
          <Button type="submit" className="w-full">Send</Button>

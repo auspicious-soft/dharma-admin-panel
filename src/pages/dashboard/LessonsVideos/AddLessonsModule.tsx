@@ -16,6 +16,7 @@ import RichTextEditor from "@/components/reusableComponents/RichTextEditor";
 import { Label } from "@/components/ui/label";
 import CourseSelect from "@/components/reusableComponents/CourseSelect";
 import QuestionSuccessDialog from "@/components/dialogs/QuestionSuccessDialog";
+import FileUploadInput from "@/components/reusableComponents/FileUploadInput";
 
 interface FileUpload {
   id: string;
@@ -259,7 +260,7 @@ const AddLessonsModule = () => {
                           placeholder="Questionnaire "
                          
                         />
-                        <Input type="file" placeholder="Select file" />
+                        <FileUploadInput placeholder="Select file"/>
                       </div>
                     </div>
                     </div>

@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import FileUploadInput from "../FileUploadInput";
 
 interface FileUpload {
   id: string;
@@ -160,14 +161,14 @@ const VideoSlideField = () => {
                     {/* PDF / Questionnaire → File upload */}
                     {(fileUpload.fileType === "PDF" ||
                       fileUpload.fileType === "Questionnaire") && (
-                      <Input
-                        type="file"
-                        onChange={(e) =>
+                      <FileUploadInput
+                        placeholder="Select"
+                        onFileChange={(file) =>
                           updateFileUpload(
                             section.id,
                             fileUpload.id,
                             "file",
-                            e.target.files?.[0] || null
+                            file
                           )
                         }
                       />

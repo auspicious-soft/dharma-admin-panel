@@ -11,9 +11,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import React from "react";
+import React, { useState } from "react";
 
 const AddAnnouncements = () => {
+     const [time, setTime] = useState("");
   return (
     <div className="flex flex-col gap-5 ">
       <div className="flex justify-between flex-col lg:flex-row gap-4 items-center">
@@ -50,12 +51,7 @@ const AddAnnouncements = () => {
           </div>
           <div className="space-y-1 w-full">
             <Label className="text-paragraph">Select Time</Label>
-            <TimeInput
-              value={""}
-              onChange={function (): void {
-                throw new Error("Function not implemented.");
-              }}
-            />
+            <TimeInput value={time} onChange={setTime} />
           </div>
         </div>
          <Button type="submit" className="w-full">Send</Button>

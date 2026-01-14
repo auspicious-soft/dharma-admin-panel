@@ -13,6 +13,7 @@ import { FileItem } from "./examsPage.data";
 import MockExam from "@/assets/mock-exam.png";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import FileUploadInput from "../reusableComponents/FileUploadInput";
 
 type Props = {
   open: boolean;
@@ -82,7 +83,7 @@ const PracticeExamDialog = ({ open, onOpenChange, data }: Props) => {
                 <div className="flex justify-between items-start flex-col gap-2 pb-2">
                   <Label className="text-paragraph">Select CSV</Label>
                   <div className="flex gap-2 w-full items-start lg:items-center flex-col md:flex-row">
-                    <Input className="flex-1" type="file" />
+                     <FileUploadInput placeholder="Select"/>
                   </div>
                 </div>
               )}

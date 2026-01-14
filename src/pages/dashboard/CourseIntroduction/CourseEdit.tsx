@@ -13,6 +13,7 @@ import { BinMinusIn } from "iconoir-react";
 import SuccessfullyIcon from "@/assets/successfully-icon.png";
 import CourseSelect from "@/components/reusableComponents/CourseSelect";
 import QuestionSuccessDialog from "@/components/dialogs/QuestionSuccessDialog";
+import FileUploadInput from "@/components/reusableComponents/FileUploadInput";
 
 interface BulletPoint {
   id: string;
@@ -605,14 +606,14 @@ const CourseEdit = () => {
                       {/* PDF / Questionnaire → File upload */}
                       {(fileUpload.fileType === "PDF" ||
                         fileUpload.fileType === "Questionnaire") && (
-                        <Input
-                          type="file"
-                          onChange={(e) =>
+                        <FileUploadInput
+                          placeholder="Select"
+                          onFileChange={(file) =>
                             updateFileUpload(
                               section.id,
                               fileUpload.id,
                               "file",
-                              e.target.files?.[0] || null
+                              file ?? null
                             )
                           }
                         />
@@ -657,7 +658,6 @@ const CourseEdit = () => {
         icon={SuccessfullyIcon}
         title="Saved Successfully"
       />
-
     </div>
   );
 };

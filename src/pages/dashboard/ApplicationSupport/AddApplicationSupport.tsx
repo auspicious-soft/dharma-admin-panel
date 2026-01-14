@@ -13,12 +13,13 @@ import { BinMinusIn } from "iconoir-react";
 import SuccessfullyIcon from "@/assets/successfully-icon.png";
 import CourseSelect from "@/components/reusableComponents/CourseSelect";
 import QuestionSuccessDialog from "@/components/dialogs/QuestionSuccessDialog";
+import FileUploadInput from "@/components/reusableComponents/FileUploadInput";
 
 interface FileUpload {
   id: string;
   fileName: string;
   duration: string;
-  fileType: "" | "PDF" | "Video" ;
+  fileType: "" | "PDF" | "Video";
   file: File | null;
   videoUrl: string;
 }
@@ -209,15 +210,15 @@ const AddApplicationSupport = () => {
                       )}
 
                       {/* PDF / Questionnaire → File upload */}
-                      {(fileUpload.fileType === "PDF" ) && (
-                        <Input
-                          type="file"
-                          onChange={(e) =>
+                      {fileUpload.fileType === "PDF" && (
+                        <FileUploadInput
+                          placeholder="Select"
+                          onFileChange={(file) =>
                             updateFileUpload(
                               section.id,
                               fileUpload.id,
                               "file",
-                              e.target.files?.[0] || null
+                              file
                             )
                           }
                         />

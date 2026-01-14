@@ -8,7 +8,7 @@ const Tickets = () => {
     <div className="flex flex-col gap-5 ">
        <div className="flex justify-between flex-col lg:flex-row gap-4 items-center">
         <h2 className="justify-start text-2xl font-bold w-full lg:w-auto">
-         Notifications
+         Tickets
         </h2>  
 
         <div className="flex flex-wrap flex-1 w-full gap-2 lg:gap-4 lg:justify-end">

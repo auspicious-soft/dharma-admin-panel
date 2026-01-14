@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import RichTextEditor from "@/components/reusableComponents/RichTextEditor";
+import FileUploadInput from "./FileUploadInput";
 
 interface Task {
   id: string;
@@ -99,16 +100,11 @@ const DomainTaskCard: React.FC<DomainTaskCardProps> = ({
                 />
               </div>
             )}
-
-            <Input
-              type="file"
+            <FileUploadInput
+              placeholder="Select file"
               accept="image/*"
-              onChange={(e) =>
-                updateTask(
-                  task.id,
-                  "flowDiagramUrl",
-                  e.target.files?.[0] || undefined
-                )
+              onFileChange={(file) =>
+                updateTask(task.id, "flowDiagramUrl", file ?? undefined)
               }
             />
           </div>
@@ -141,20 +137,17 @@ const DomainTaskCard: React.FC<DomainTaskCardProps> = ({
               </div>
             </div>
           ) : (
-            <div className="flex justify-between items-start flex-col gap-1 pb-2">
+            <div className="flex justify-between items-start flex-col gap-2 pb-2">
               <Label className="text-paragraph">Questionnaire CSV</Label>
               <div className="flex gap-2 w-full items-start lg:items-center flex-col md:flex-row">
-                <Input
-                  className="flex-1"
-                  type="file"
-                  onChange={(e) =>
-                    updateTask(
-                      task.id,
-                      "questionnaire",
-                      e.target.files?.[0] || null
-                    )
+                <FileUploadInput
+                  placeholder="Select file"
+                  accept="image/*"
+                  onFileChange={(file) =>
+                    updateTask(task.id, "questionnaire", file)
                   }
                 />
+
                 <Button className="rounded-[10px] !text-xs font-medium !py-2 bg-paragraph !px-5">
                   Download Sample
                 </Button>

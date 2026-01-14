@@ -22,6 +22,7 @@ import { Label } from "@/components/ui/label";
 import MockExam from "@/assets/mock-exam.png";
 import { BinMinusIn } from "iconoir-react";
 import TimeInput from "../reusableComponents/TimeInput";
+import FileUploadInput from "../reusableComponents/FileUploadInput";
 
 type MockExamDialogProps = {
   open: boolean;
@@ -49,6 +50,7 @@ const domainOptions = [
 
 const MockExamDialog = ({ open, onOpenChange, data }: MockExamDialogProps) => {
   const isEdit = Boolean(data);
+     const [time, setTime] = useState("");
 
   // State for domain sections
   const [domainSections, setDomainSections] = useState<DomainSection[]>([
@@ -137,12 +139,7 @@ const MockExamDialog = ({ open, onOpenChange, data }: MockExamDialogProps) => {
 
           <div className="space-y-1 flex flex-col lg:flex-row items-end lg:items-center gap-4 w-full">
             <Input type="text" placeholder="Number of Questions" />
-            <TimeInput
-              value={""}
-              onChange={function (): void {
-                throw new Error("Function not implemented.");
-              }}
-            />
+             <TimeInput value={time} onChange={setTime} />
             <Input type="number" placeholder="Enter Price" />
           </div>
 
@@ -161,7 +158,7 @@ const MockExamDialog = ({ open, onOpenChange, data }: MockExamDialogProps) => {
             </div>
             <div className="space-y-1 w-full">
               <Label className="text-paragraph">Select CSV</Label>
-              <Input type="file" placeholder="Select CSV" />
+               <FileUploadInput placeholder="Select"/>
             </div>
           </div>
 
